@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Tows",
+            "program": "${workspaceFolder}/.build/debug/Tows",
+            "args": [],
+            "cwd": "${workspaceFolder:Tows}",
+            "preLaunchTask": "swift: Build Debug Tows"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Tows",
+            "program": "${workspaceFolder}/.build/release/Tows",
+            "args": [],
+            "cwd": "${workspaceFolder:Tows}",
+            "preLaunchTask": "swift: Build Release Tows"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test Tows",
+            "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+            "args": [
+                ".build/debug/TowsPackageTests.xctest"
+            ],
+            "cwd": "${workspaceFolder:Tows}",
+            "preLaunchTask": "swift: Build All"
+        }
+    ]
+}
